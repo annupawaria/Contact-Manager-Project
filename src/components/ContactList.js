@@ -1,8 +1,12 @@
-import { Delete } from '@mui/icons-material';
+// import { Delete } from '@mui/icons-material';
 import React from 'react';
 
 const ContactList = ({ contact }) => {
-  // console.log(contact,'from contactList')
+  if (!contact || !Array.isArray(contact)) {
+    // If not, you can handle this situation, for example, by rendering a message
+    return <div>No contacts available</div>;
+  }
+  console.log(contact,'from contactList')
   // Renamed the variable to avoid naming conflict
   const contactList =  contact.map((val) => {
     return (
@@ -15,10 +19,12 @@ const ContactList = ({ contact }) => {
   });
 
   return (
+    <>
     <div>
       <h1>ContactList</h1>
       <div>{contactList}</div>
     </div>
+    </>
   );
 };
 
