@@ -18,11 +18,11 @@
     /* background-color: blue; */
     border-radius: 22px
   }
-  .contact{
+  .contacts{
     display: flex;
     justify-content: space-between;
     border: 2px solid;
-    background: red;
+    background: rgb(87, 61, 61);
     margin-bottom: 2px;
     margin-left: 12px;
     margin-right: 5px;
